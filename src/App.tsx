@@ -56,6 +56,7 @@ export const App = () => {
     .then((response) => {
       setRequest(response)
       setTotal(response.total_pages)
+      setLoading(false)
       return response
     })
     .then((response) => { response.results.forEach((item) => {
