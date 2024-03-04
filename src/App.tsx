@@ -116,6 +116,7 @@ export const App = () => {
         setMovies(arrFilmStorage)
         setLoading(false)
         setTotal(arrFilmStorage.length / 20)
+        setNavigate(2)
       } else { 
         setMovies([]) 
         setTotal(0)
@@ -140,11 +141,11 @@ export const App = () => {
       current={currentPage}
       />
   </div>)
-
+  
   return (
     <div>
       <Navigation handleNavigation={tabChangeHandler}/>
-      {currentPage === 1 ? (
+      {navigate === 1 ? (
         <Search handleChange={handleChange} />
       ) : null}
       {contentLoading}
